@@ -19,7 +19,7 @@
 			<div class="col-md-9" ng-controller="MDListing">
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1">Narrow:</span>
-					<input type="text" class="form-control" placeholder="Search" ng-model="query">
+					<input type="text" ng-model="query" autofocus class="form-control" placeholder="Search" >
 				</div>
 				<div class="results" style="padding-top : 1em;">
 					<table class="table table-striped table-bordered table-responsive table-hover" style="padding-top : 1em" >
@@ -30,7 +30,7 @@
 								<th>Becomes...</th>
 							</tr>
 						</thead>
-						<tr ng-repeat="mdItem in mdItems">
+						<tr ng-repeat="mdItem in mdItems | filter:query | orderBy:orderField">
 							<td>{{mdItem.type}}</td>
 							<td><pre>{{mdItem.md}}</pre></td>
 							<td><span ng-bind-html="mdItem.html"></span></td>

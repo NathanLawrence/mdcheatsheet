@@ -1,17 +1,22 @@
 [
     {
+        "type": "Heading 3", 
+        "md": "### This is H3", 
+        "html": "<h3>This is H3</h3>"
+    },
+    {
         "type": "Code", 
         "md": "`var f = new function()`", 
         "html": "<code>var f = new function()</code>"
     }, 
     {
-        "type": "Header 1", 
-        "md": "#This is H1", 
+        "type": "Heading 1", 
+        "md": "# This is H1", 
         "html": "<h1>This is H1</h1>"
     },
     {
-        "type": "Header 2", 
-        "md": "#This is H2", 
+        "type": "Heading 2", 
+        "md": "## This is H2", 
         "html": "<h2>This is H2</h2>"
     }
 ]
