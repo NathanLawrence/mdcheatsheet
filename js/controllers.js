@@ -1,6 +1,6 @@
-var testing = angular.module('testing',['ngSanitize']);
+var cheatsheet = angular.module('cheatsheet',['ngSanitize']);
 
-testing.controller('MDListing', function MDListing($scope, $http){
+cheatsheet.controller('MDListing', function MDListing($scope, $http){
 	$http.get('data.json').success(function (data){
 		$scope.mdItems = data;
 		$scope.orderField = "type";
