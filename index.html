@@ -2,6 +2,7 @@
 <html lang="en" ng-app='testing'>
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
 	<script src="js/controllers.js"></script>
 	<meta charset="UTF-8">
 	<title>Markdown Cheat Sheet</title>
@@ -29,22 +30,18 @@
 								<th>Becomes...</th>
 							</tr>
 						</thead>
-						<tr>
-							<td>Code</td>
-							<td><pre>`var f = new function()`</pre></td>
-							<td><code>var f = new function()</code></td>
+						<tr ng-repeat="mdItem in mdItems">
+							<td>{{mdItem.type}}</td>
+							<td><pre>{{mdItem.md}}</pre></td>
+							<td><span ng-bind-html="mdItem.html"></span></td>
 						</tr>
 					</table>
 				</div>
-				<h1>{{entry.html}}</h1>
 			</div>
 			<div class="col-md-3">
-				{{query}}
+
 			</div>
 		</div>
 	</div>
-
-
-
 </body>
 </html>
