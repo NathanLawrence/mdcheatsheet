@@ -1,0 +1,12 @@
+[
+    {
+        "type": "Code", 
+        "md": "`var f = new function()`", 
+        "html": "<code>var f = new function()</code>"
+    }, 
+    {
+        "type": "Header 1", 
+        "md": "#This is H1", 
+        "html": "<h1>This is H1</h1>"
+    }
+]
