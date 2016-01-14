@@ -11,7 +11,7 @@ cheatsheet.controller('MDListing', function MDListing($scope, $http){
 	$scope.sendTyped = function() {
 		if(hasTyped === false){
 			console.log("Sending");
-			ga()
+			ga('send', 'event', 'Search', 'type', 'Typed in Search');
 			hasTyped = true;
 		}
 	};
